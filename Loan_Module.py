@@ -135,9 +135,6 @@ class new_models:
 
     def clean_process_data(self):
         df = self.data
-        # There a many missing data in the dataset espeacially in the 'DEBTINC' column
-        # The 'Reason' and 'Job' values is better represented numerically
-        # The 'BAD' column is the target
         # 'DEBTINC' column dropped
         df = df.drop(['DEBTINC'], axis=1)
         # df['REASON'].unique(), ['HomeImp', nan, 'DebtCon'], nan will be taken as other
